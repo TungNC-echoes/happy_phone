@@ -1,0 +1,314 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+* a {
+    text-decoration: none;
+}
+
+* a:hover {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 200px;
+}
+
+.container .header {
+    background: #e7e7e7;
+    height: 100px;
+    border-bottom: 1px solid #fff;
+}
+
+.container .header .header-line {
+    margin-top: 10px;
+    height: 70px;
+}
+
+.container .header .logo-area {
+    width: 270px;
+}
+
+.container .header .header-title {
+    line-height: 70px;
+    color: #355605;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.container .logo-area img {
+    width: 215px;
+    height: 70px;
+}
+
+.container .header .header-menu-right {
+    line-height: 70px;
+    float: right;
+}
+
+.container .dropdown-toggle {
+    font-size: 22px;
+}
+
+.container .dropdown-menu li {
+    font-size: 18px;
+}
+
+.container .left-menu {
+    min-height: 800px;
+    background: #ded9e4;
+    padding: 30px 10px;
+}
+
+.left-menu ul li {
+    font-size: 20px;
+    list-style: none;
+}
+
+.search-area {
+    margin: 20px 40px;
+    width: 252px;
+    border: 1px solid #eaaaaa;
+}
+
+.search-area input {
+    width: 220px;
+    float: left;
+    border: 0px;
+    padding: 0px 10px;
+}
+
+.search-area button {
+    width: 30px;
+    border: 0px;
+}
+
+.left-menu ul .menu {
+    margin: 20px 0px;
+}
+
+.left-menu ul .menu a .active {
+    background: #b2c5d0;
+}
+
+.left-menu ul .menu a li {
+    padding: 0px 20px;
+    border: 1px solid #fff;
+    height: 45px;
+    line-height: 45px;
+    background: #eaeaea;
+}
+
+.left-menu ul .menu a li:hover {
+    background: #b2c5d0;
+    cursor: pointer;
+}
+
+.left-menu ul .menu a{
+    color: #333638;
+    font-weight: normal;
+}
+
+.left-menu ul .menu a:hover {
+    color: #fff;
+}
+
+.container .main-content {
+    padding: 0px;
+    min-height: 500px;
+}
+
+.container .main-content .day {
+    padding: 0px;
+    border: 1px solid #fff;
+    background-color: #d6e6d3;
+}
+
+.container .main-content .day .title {
+    border: #fff;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .content-title {
+    height: 50px;
+    line-height: 50px;
+    background: #2a88bd;
+    color: #fff;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 0px 50px;
+    border: 1px solid #fff;
+}
+
+.container .main-content .yesterday .title {
+    background-color: #b6bbb5;
+}
+
+.container .main-content .today .title {
+    background-color: #dac2a9;
+}
+
+.container .main-content .tomorrow .title  {
+    background-color: #b5b06e;
+}
+
+.lesson-block {
+    padding: 10px 10px;
+}
+
+.lesson-block .lesson {
+    height: 200px;
+    background: #fff;
+    padding: 5px 5px;
+    margin: 10px 0px;
+    border-radius: 4px;
+}
+
+.lesson-block .lesson .lesson-title, .lesson-block .lesson .lesson-time, .lesson-block .lesson .view-lesson {
+    text-align: center;
+}
+
+.lesson-block .lesson .lesson-title {
+    background: #2a88bd;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.lesson-block .lesson .lesson-time {
+    border-top: 1px solid #fff;
+    background: #cecece;
+}
+
+.lesson-block .lesson .lesson-content {
+    font-size: 16px;
+    margin: 10px 10px;
+    height: 90px;
+}
+
+.lesson-block .lesson .view-lesson a {
+    padding: 5px 10px;
+    border-radius: 3px;
+    background: #2a88bd;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #fff;
+}
+
+table tr {
+    height: 35px;
+    line-height: 35px;
+    border: 1px solid #fff;
+}
+
+table tr th {
+    border: 1px solid #fff;
+    background: #4f7986;
+    color: #fff;
+    padding: 0px 5px;
+}
+
+table tr td {
+    border: 1px solid #fff;
+    padding: 0px 5px;
+}
+
+table tr:nth-child(even){
+    background: #b1cfe0;
+    color: #000;
+}
+
+table tr:nth-child(odd){
+    background: #33acf1;
+    color: #fff;
+}
+
+table tr:nth-child(even) a {
+    color: #000;
+}
+
+table tr:nth-child(even) a:hover {
+    color: #d24f4a;
+}
+
+table tr:nth-child(odd) a {
+    color: #fff;
+}
+
+table tr:nth-child(odd) a:hover {
+    color: #f17c61;
+}
+
+.new-report .base-input {
+    height: 260px !important;
+}
+
+.new-report .block-input {
+    height: 30px;
+    line-height: 30px;
+    margin: 10px 0px;
+}
+
+.new-report .block-input .title {
+    float: left;
+}
+
+.new-report .block-input .input {
+    width: 400px;
+}
+
+.new-report .unit {
+    margin: 0px 15px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.footer .container {
+    margin: 0px;
+    clear: both;
+    background: #f3e1e1;
+    border: 1px solid #fff;
+}
+
+.button-add {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 150px;
+    border: 2px solid #bbc5c4;
+    background: #523c96;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 15px 0px;
+}
+
+.button-add:hover {
+    color: #fff;
+    background: #967062;
+}
+
+.btn-submit-bottom {
+    margin: 40px 570px;
+    background: #2e2ea2;
+    color: #fff;
+}
+
+.new-excercise .btn-submit-bottom {
+    margin: 20px 30px !important;
+}
+
+.btn-submit-bottom:hover {
+    background: blue;
+    color: #fff;
+}
