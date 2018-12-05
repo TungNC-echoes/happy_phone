@@ -117,7 +117,7 @@ a:hover {
 }
 
 .carousel-indicators {
-	bottom: -60px !important;
+	bottom: -140px !important;
 }
 
 .footer {
@@ -293,4 +293,8 @@ a:hover {
 
 #content-page .block-tile .title {
 	width: 230px;
+}
+
+.carousel-inner ul{
+	margin: 0px !important;
 }
