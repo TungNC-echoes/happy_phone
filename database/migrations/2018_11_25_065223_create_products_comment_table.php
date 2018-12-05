@@ -15,9 +15,9 @@ class CreateProductsCommentTable extends Migration
     {
         Schema::create('products_comment', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_id')->nullable();
+            $table->integer('product_id');
             $table->integer('parent_id')->nullable();
-            $table->integer('user_id')->nullable();
+            $table->integer('user_id');
             $table->string('content')->nullable();
             $table->timestamps();
             $table->softDeletes();

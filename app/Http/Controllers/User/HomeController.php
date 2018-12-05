@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Model\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use App\Model\Category;
@@ -19,24 +20,26 @@ class HomeController extends UserController
 
     public function showHome()
     {
-        $man_excercises = Excercise::whereHas('category', function ($query) {
-            $query->where('parent_category_id', Category::MAN);
-        })->paginate(4,['*'], 'man');
-        $woman_excercises = Excercise::whereHas('category', function ($query) {
-            $query->where('parent_category_id', Category::WOMAN);
-        })->paginate(4,['*'], 'woman');
-        $yoga_excercises = Excercise::whereHas('category', function ($query) {
-            $query->where('parent_category_id', Category::YOGA);
-        })->paginate(4,['*'], 'yoga');
-        $posts = POST::paginate(4,['*'], 'post');
-        $musics = Music::paginate(6,['*'], 'music');
+        $products = Product::all();
+//        $man_excercises = Excercise::whereHas('category', function ($query) {
+//            $query->where('parent_category_id', Category::MAN);
+//        })->paginate(4,['*'], 'man');
+//        $woman_excercises = Excercise::whereHas('category', function ($query) {
+//            $query->where('parent_category_id', Category::WOMAN);
+//        })->paginate(4,['*'], 'woman');
+//        $yoga_excercises = Excercise::whereHas('category', function ($query) {
+//            $query->where('parent_category_id', Category::YOGA);
+//        })->paginate(4,['*'], 'yoga');
+//        $posts = POST::paginate(4,['*'], 'post');
+//        $musics = Music::paginate(6,['*'], 'music');
 
         return View::make('user.home', [
-            'man_excercises' => $man_excercises,
-            'woman_excercises' => $woman_excercises,
-            'yoga_excercises' => $yoga_excercises,
-            'posts' => $posts,
-            'musics' => $musics,
+            'products' => $products
+//            'man_excercises' => $man_excercises,
+//            'woman_excercises' => $woman_excercises,
+//            'yoga_excercises' => $yoga_excercises,
+//            'posts' => $posts,
+//            'musics' => $musics,
         ]);
     }
 

@@ -15,7 +15,7 @@ class CreateProductsDetailTable extends Migration
     {
         Schema::create('products_detail', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_id')->nullable();
+            $table->integer('product_id');
 
             $table->string('screen_type')->nullable();
             $table->string('screen_color')->nullable();
@@ -43,7 +43,7 @@ class CreateProductsDetailTable extends Migration
             $table->string('memory_card')->nullable();
             $table->string('max_memory_card')->nullable();
 
-            $table->string('battery')->nullable();
+            $table->integer('battery')->nullable();
             $table->string('battery_type')->nullable();
             $table->string('battery_removable')->nullable();
             $table->string('max_time_call')->nullable();

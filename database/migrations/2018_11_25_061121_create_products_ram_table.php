@@ -15,8 +15,8 @@ class CreateProductsRamTable extends Migration
     {
         Schema::create('products_ram', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_id')->nullable();
-            $table->integer('ram')->nullable();
+            $table->integer('product_id');
+            $table->integer('ram');
             $table->integer('plus_price')->nullable();
             $table->timestamps();
             $table->softDeletes();

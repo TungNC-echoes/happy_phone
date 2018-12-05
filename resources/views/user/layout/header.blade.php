@@ -1,8 +1,8 @@
 <div class="header">
     <div class="header-top">
         <div class="social">
-            <a href="{{ $youtube->url }}" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-            <a href="{{ $fanpage->url }}" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         </div>
         <div class="right-menu-top">
             @if (Auth::guest())
@@ -64,10 +64,12 @@
     </div>
     <div class="col-md-12 header-nav">
         <ul>
-            <li class="item @if (!isset($content)) active @endif"><a href="/">Trang chủ</a></li>
-            @foreach ($root_categories as $root_category)
-                <li class="item @if (isset($content) && $root_category->id == $content->id) active @endif"><a href="{{ route('content', ['category' => $root_category->id]) }}">{{ $root_category->title }}</a></li>
-            @endforeach
+            <li class="item  active "><a href="/">Trang chủ</a></li>
+            <li class="item "><a href="http://fitness.com/content/1">Thể hình nam</a></li>
+            <li class="item "><a href="http://fitness.com/content/2">Thể hình nữ</a></li>
+            <li class="item "><a href="http://fitness.com/content/3">Bài tập yoga</a></li>
+            <li class="item "><a href="http://fitness.com/content/4">Bài viết thể hình</a></li>
+            <li class="item "><a href="http://fitness.com/content/5">Nhạc thể hình</a></li>
         </ul>
     </div>
 </div>
