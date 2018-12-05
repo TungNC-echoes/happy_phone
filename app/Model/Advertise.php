@@ -9,7 +9,11 @@ class Advertise extends BaseModel
     protected $table = 'advertises';
 
     protected $fillable = [
-        'title', 'content', 'status', 'price', 'note'
+        'title',
+        'content',
+        'status',
+        'price',
+        'note'
     ];
 
     /**
