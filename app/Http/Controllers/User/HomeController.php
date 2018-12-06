@@ -20,7 +20,7 @@ class HomeController extends UserController
 
     public function showHome()
     {
-        $products = Product::all();
+        $products_iphone = Product::where('brand', 'IPHONE')->paginate(4);
 //        $man_excercises = Excercise::whereHas('category', function ($query) {
 //            $query->where('parent_category_id', Category::MAN);
 //        })->paginate(4,['*'], 'man');
@@ -34,7 +34,7 @@ class HomeController extends UserController
 //        $musics = Music::paginate(6,['*'], 'music');
 
         return View::make('user.home', [
-            'products' => $products
+            'products_iphone' => $products_iphone
 //            'man_excercises' => $man_excercises,
 //            'woman_excercises' => $woman_excercises,
 //            'yoga_excercises' => $yoga_excercises,
