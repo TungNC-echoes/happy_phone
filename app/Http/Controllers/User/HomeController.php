@@ -20,27 +20,33 @@ class HomeController extends UserController
 
     public function showHome()
     {
-        $products_iphone = Product::where('brand', 'IPHONE')->paginate(4);
-//        $man_excercises = Excercise::whereHas('category', function ($query) {
-//            $query->where('parent_category_id', Category::MAN);
-//        })->paginate(4,['*'], 'man');
-//        $woman_excercises = Excercise::whereHas('category', function ($query) {
-//            $query->where('parent_category_id', Category::WOMAN);
-//        })->paginate(4,['*'], 'woman');
-//        $yoga_excercises = Excercise::whereHas('category', function ($query) {
-//            $query->where('parent_category_id', Category::YOGA);
-//        })->paginate(4,['*'], 'yoga');
-//        $posts = POST::paginate(4,['*'], 'post');
-//        $musics = Music::paginate(6,['*'], 'music');
-
+        $new_products = Product::where('new', '1')->paginate(5);
+        $sale_products = Product::where('sale','<>', 0)->paginate(5);
         return View::make('user.home', [
-            'products_iphone' => $products_iphone
-//            'man_excercises' => $man_excercises,
-//            'woman_excercises' => $woman_excercises,
-//            'yoga_excercises' => $yoga_excercises,
-//            'posts' => $posts,
-//            'musics' => $musics,
+            'new_products' => $new_products
         ]);
+    }
+
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect()->route('/');
+    }
+
+    public function getSearch(Request $req)
+    {
+        $products = Product::where('name', 'like', '%'.$req->key.'%')->orWhere('price', $req->key)->paginate(8);
+        return view('user.search', compact('products'));
+    }
+
+    public function getGioithieu()
+    {
+        return view('user.gioithieu');
+    }
+
+    public function getLienHe()
+    {
+        return view('page.lienhe');
     }
 
     public function getExcercises($parent_category, $tab)

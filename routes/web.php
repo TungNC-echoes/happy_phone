@@ -12,7 +12,46 @@
 */
 
 // Front end
-Route::get('/', 'User\HomeController@showHome')->name('home');
+//Route::get('/', 'User\HomeController@showHome')->name('home');
+
+Route::get('/', [
+   'as' => 'home',
+   'uses' => 'User\HomeController@showHome'
+]);
+
+Route::any('dang-nhap', [
+    'as' => 'login',
+    'uses' => 'HomeController@login'
+]);
+Route::get('dang-ki', [
+    'as' => 'signin',
+    'uses' => 'HomeController@getSignin'
+]);
+
+Route::post('dang-ki', [
+    'as' => 'signin',
+    'uses' => 'HomeController@postSignin'
+]);
+
+Route::get('dang-xuat', [
+    'as' => 'logout',
+    'uses' => 'HomeController@getLogout'
+]);
+
+Route::get('search', [
+    'as' => 'search',
+    'uses' => 'HomeController@getSearch'
+]);
+
+Route::get('gioi-thieu', [
+    'as' => 'gioithieu',
+    'uses' => 'HomeController@getGioithieu'
+]);
+
+Route::get('lien-he', [
+    'as' => 'lienhe',
+    'uses' => 'HomeController@getLienHe'
+]);
 
 Route::get('content/{category}', 'User\ContentController@showContent')->name('content');
 

@@ -3,7 +3,7 @@
         <div class="footer-logo">
             <center class="logo">
                 <a href="#">
-                    <img src="{{ $logo->url }}" alt="{{ $logo->alt }}" class="logo">
+                    <img src="{{asset('source/assets/dest/images/phone-black.png')}}" alt="{{ $logo->alt }}" class="logo">
                 </a>
             </center>
         </div>
