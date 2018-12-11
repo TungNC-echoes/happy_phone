@@ -34,7 +34,7 @@
         <li>
             <a href="#">
                 <img width="100" height="70" style="float: left;width: 100px;height: 57px;margin: 0 10px 0 0;" src="https://cdn.tgdd.vn/Files/2018/12/05/1135760/huawei_800x450-100x100.jpg" alt="Huawei Enjoy 9 có màn 6.26 inch, pin 3.900 mAh được TENAA chứng nhận" class="left">
-                <h4 class="right" style="display: block;overflow: hidden;height: 36px;line-height: 1.3em;font-size: 14px;color: #333;margin-bottom: 5px; margin-top: 0px" >Huawei Enjoy 9 có màn 6.26 inch, pin 3.900 mAh được TENAA chứng nhận</h4>
+                <span style="font-size: 14px;color: #333;margin-bottom: 5px; margin-top: 0px" >Huawei Enjoy 9 có màn 6.26 inch, pin 3.900 mAh được TENAA chứng nhận</span>
                 <span>48 phút trước</span>
             </a>
         </li>

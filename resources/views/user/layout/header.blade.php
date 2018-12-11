@@ -11,8 +11,15 @@
                 <ul class="top-details menu-beta l-inline">
                     <li><a href="#"><i class="fa fa-user"></i>Tài khoản</a></li>
                     @if(Auth::check())
-                        <li><a href="#">Chào bạn {{Auth::user()->full_name}}</a></li>
-                        <li><a href="{{route('logout')}}">Đăng xuất</a></li>
+                        <li><a href="#">Chào bạn {{Auth::user()->name}}</a></li>
+                        <li><a href="{{ route('logout') }}"
+                               onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">Đăng xuất
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form></li>
+
                     @else
                         <li><a href="{{route('signin')}}">Đăng kí</a></li>
                         <li><a href="{{route('login')}}">Đăng nhập</a></li>
@@ -30,7 +37,7 @@
             <div class="pull-right beta-components space-left ov">
                 <div class="space10">&nbsp;</div>
                 <div class="col-md-12">
-                    <form action="{{ route('search_title') }}" method="get">
+                    <form action="{{ route('search') }}" method="get">
                         <div class="search">
                             <input type="text" name="search_input" placeholder="Tìm kiếm" class="input-search" title="Nhập tên bài tập, bài viết, nhạc ..." required>
                             <button type="submit" class="button-search">
@@ -137,7 +144,6 @@
                                                      {{--document.getElementById('logout-form').submit();">--}}
                                 {{--Đăng xuất--}}
                             {{--</a>--}}
-
                             {{--<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">--}}
                                 {{--{{ csrf_field() }}--}}
                             {{--</form>--}}

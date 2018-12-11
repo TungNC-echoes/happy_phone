@@ -21,26 +21,31 @@ Route::get('/', [
 
 Route::any('dang-nhap', [
     'as' => 'login',
-    'uses' => 'HomeController@login'
+    'uses' => 'User\HomeController@login'
 ]);
 Route::get('dang-ki', [
     'as' => 'signin',
-    'uses' => 'HomeController@getSignin'
+    'uses' => 'User\HomeController@getSignin'
 ]);
 
 Route::post('dang-ki', [
     'as' => 'signin',
-    'uses' => 'HomeController@postSignin'
+    'uses' => 'User\HomeController@postSignin'
 ]);
 
 Route::get('dang-xuat', [
     'as' => 'logout',
-    'uses' => 'HomeController@getLogout'
+    'uses' => 'User\HomeController@getLogout'
 ]);
 
 Route::get('search', [
     'as' => 'search',
-    'uses' => 'HomeController@getSearch'
+    'uses' => 'User\HomeController@getSearch'
+]);
+
+Route::get('chi-tiet-san-pham/{id}', [
+    'as' => 'chitietsanpham',
+    'uses' => 'User\HomeController@getChitiet'
 ]);
 
 Route::get('gioi-thieu', [
@@ -66,8 +71,6 @@ Route::get('/category/{category_id}/{tab}', 'User\HomeController@getExcercises')
 Route::get('/post', 'User\HomeController@getPosts')->name('get_posts');
 
 Route::get('/music', 'User\HomeController@getMusics')->name('get_musics');
-
-Route::get('/search', 'User\HomeController@searchTitle')->name('search_title');
 
 Route::get('/detail/excercise/{excercise_id}', 'User\DetailController@showDetail')->name('show_excercise_detail');
 

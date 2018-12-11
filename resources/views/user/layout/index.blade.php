@@ -22,7 +22,7 @@
     @yield('content')
 </div>
 @include('user.layout.footer')
-<script src="{{ $js_link }}"></script>
+{{--<script src="{{ $js_link }}"></script>--}}
 <script src="{{asset('source/assets/dest/js/jquery.js')}}"></script>
 <script src="{{asset('source/assets/dest/vendors/jqueryui/jquery-ui-1.10.4.custom.min.js')}}"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
