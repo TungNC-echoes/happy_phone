@@ -93,7 +93,7 @@
                                             <?php
                                             $image = $sptt->image;
                                             ?>
-                                            <a href="{{route('chitietsanpham', $sptt->id)}}"><img src="{{'../'.$image}}" height="150px" width="250px" alt=""></a>
+                                            <a href="{{route('chitietsanpham', $sptt->id)}}"><img src="{{'../'.$image}}" height="150px" width="150px" alt=""></a>
                                         </div>
                                         <div class="single-item-body">
                                             <p class="single-item-title">{{$sptt->name}}</p>
@@ -111,7 +111,7 @@
                                         </div>
                                         <div class="single-item-caption">
                                             <a class="add-to-cart pull-left" href="#"><i class="fa fa-shopping-cart"></i></a>
-                                            <a class="beta-btn primary" href="#">Details <i class="fa fa-chevron-right"></i></a>
+                                            <a class="beta-btn primary" href="{{route('chitietsanpham', $sptt->id)}}">Details <i class="fa fa-chevron-right"></i></a>
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
@@ -121,6 +121,33 @@
                         <div class="row">{{$sp_tuongtu->links()}}</div>
                     </div> <!-- .beta-products-list -->
                 </div>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                    Xem Thêm ...
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">{{$sanpham->name}}</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    {{--<span aria-hidden="true">&times;</span>--}}
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                {{$sanpham->detail}}
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div class="col-sm-3 aside">
                     <div class="widget">
                         <h3 class="widget-title">Best Sellers</h3>
