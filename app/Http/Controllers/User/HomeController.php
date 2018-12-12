@@ -113,7 +113,8 @@ class HomeController extends UserController
 
     public function getChitiet(Request $request)
     {
-        $sanpham = Product::where('id', $request->id)->first();
+        $sanpham = Product::with(['colors', 'roms', 'rams', 'detail', 'ratings', 'comments'])->where('id', $request->id)->first();
+//        $sanpham = Product::with(['colors', 'roms', 'rams', 'ratings', 'detail', 'comments'])->where('id', $request->id)->first();
         $sp_tuongtu = Product::where('brand','like', $sanpham->brand)->paginate(6);
         return view('user.pages.chitiet_sanpham', compact('sanpham', 'sp_tuongtu'));
     }
