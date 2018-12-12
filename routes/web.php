@@ -12,7 +12,51 @@
 */
 
 // Front end
-Route::get('/', 'User\HomeController@showHome')->name('home');
+//Route::get('/', 'User\HomeController@showHome')->name('home');
+
+Route::get('/', [
+   'as' => 'home',
+   'uses' => 'User\HomeController@showHome'
+]);
+
+Route::any('dang-nhap', [
+    'as' => 'login',
+    'uses' => 'User\HomeController@login'
+]);
+Route::get('dang-ki', [
+    'as' => 'signin',
+    'uses' => 'User\HomeController@getSignin'
+]);
+
+Route::post('dang-ki', [
+    'as' => 'signin',
+    'uses' => 'User\HomeController@postSignin'
+]);
+
+Route::get('dang-xuat', [
+    'as' => 'logout',
+    'uses' => 'User\HomeController@getLogout'
+]);
+
+Route::get('search', [
+    'as' => 'search',
+    'uses' => 'User\HomeController@getSearch'
+]);
+
+Route::get('chi-tiet-san-pham/{id}', [
+    'as' => 'chitietsanpham',
+    'uses' => 'User\HomeController@getChitiet'
+]);
+
+Route::get('gioi-thieu', [
+    'as' => 'gioithieu',
+    'uses' => 'HomeController@getGioithieu'
+]);
+
+Route::get('lien-he', [
+    'as' => 'lienhe',
+    'uses' => 'HomeController@getLienHe'
+]);
 
 Route::get('content/{category}', 'User\ContentController@showContent')->name('content');
 
@@ -27,8 +71,6 @@ Route::get('/category/{category_id}/{tab}', 'User\HomeController@getExcercises')
 Route::get('/post', 'User\HomeController@getPosts')->name('get_posts');
 
 Route::get('/music', 'User\HomeController@getMusics')->name('get_musics');
-
-Route::get('/search', 'User\HomeController@searchTitle')->name('search_title');
 
 Route::get('/detail/excercise/{excercise_id}', 'User\DetailController@showDetail')->name('show_excercise_detail');
 

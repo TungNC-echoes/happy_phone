@@ -33,7 +33,7 @@ class LoginController extends Controller
         } elseif (Auth::user()->level == 2) {
             return '/coach';
         } else {
-            return '/member';
+            return '/';
         }
 
     }
