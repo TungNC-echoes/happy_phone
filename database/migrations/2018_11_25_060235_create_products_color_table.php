@@ -15,8 +15,8 @@ class CreateProductsColorTable extends Migration
     {
         Schema::create('products_color', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('product_id')->nullable();
-            $table->integer('color')->nullable();
+            $table->integer('product_id');
+            $table->string('color')->nullable();
             $table->string('image')->nullable();
             $table->integer('plus_price')->nullable();
             $table->timestamps();

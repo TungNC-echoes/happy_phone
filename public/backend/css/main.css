@@ -312,3 +312,21 @@ table tr:nth-child(odd) a:hover {
     background: blue;
     color: #fff;
 }
+
+.space60 {
+    line-height:60px
+}
+
+.item-phone {
+    float: left;
+    box-sizing: border-box;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid #e7e7e77d;
+    border-bottom: 1px solid #e7e7e77d;
+}
+.row {
+    margin-left: -15px !important;
+}

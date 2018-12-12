@@ -32,9 +32,5 @@ class UserController extends Controller
         View::share('youtube', $youtube);
         $contact = WebInfo::where('label', 'contact')->first();
         View::share('contact', $contact);
-        $root_categories = Category::where('parent_category_id', 0)->get();
-        View::share('root_categories', $root_categories);
-        $categories = Category::all();
-        View::share('categories', $categories);
     }
 }
