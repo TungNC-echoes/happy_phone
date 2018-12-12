@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductRam extends BaseModel
 {
-    protected $table = 'product_id';
+    protected $table = 'products_ram';
 
     protected $fillable = [
         'product_id',
