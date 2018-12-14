@@ -1,7 +1,7 @@
 @extends('user.layout.index')
 @section('content')
     <div class="inner-header">
-        <div class="container">
+        <div>
             <div class="pull-left">
                 <h6 class="inner-title">Sản phẩm {{$sanpham->name}}</h6>
             </div>

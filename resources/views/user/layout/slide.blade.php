@@ -1,4 +1,4 @@
-<div id="myCarousel" class="carousel slide" data-ride="carousel" style="float: left;width: 65.8%;height: 280px;overflow: hidden;position: relative;background: #f0f0f0;margin: 0px 0px 15px 0px; ">
+<div id="myCarousel" class="carousel slide carousel-left" data-ride="carousel" style="float: left;width: 64.8%;height: 280px;overflow: hidden;position: relative;background: #f0f0f0;margin: 0px 0px 15px 0px; ">
     <!-- Indicators -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -21,15 +21,13 @@
 
     <!-- Left and right controls -->
     <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        <span class="fa fa-chevron-circle-left fa-3x"></span>
         <span class="sr-only">Previous</span>
     </a>
     <a class="right carousel-control" href="#myCarousel" data-slide="next">
-        <span class="fa fa-chevron-circle-right fa-3x"></span>
         <span class="sr-only">Next</span>
     </a>
 </div>
-<aside class="carousel-inner" style="float: right;width: 34.2%;height: 280px;overflow: hidden;">
+<aside class="carousel-inner-right display-right">
     <ul>
         <li>
             <a href="#">
