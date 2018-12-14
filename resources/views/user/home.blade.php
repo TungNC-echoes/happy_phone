@@ -14,9 +14,9 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                            <div class="row fa-border item-phone">
+                            <div class="row fa-border item-phone" style="margin-right: 0px !important">
                                 @foreach($new_products as $new_product)
-                                    <div class="col-sm-3" style="width: 224px; height: 360px">
+                                    <div class="col-sm-3 col3-phone">
                                         <div class="single-item">
                                             @if(!empty($new_product->sale))
                                                 <div class="ribbon-wrapper"><div class="ribbon sale">SALE</div></div>
@@ -57,7 +57,7 @@
                                 <div class="clearfix"></div>
                             </div>
 
-                            <div class="row fa-border item-phone">
+                            <div class="row fa-border item-phone" style="margin-right: 0px !important">
                                 @foreach($sale_products as $sale_product)
                                     <div class="col-sm-3" style="width: 224px; height: 360px">
                                         <div class="single-item">

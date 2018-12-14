@@ -8,13 +8,7 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('user/css/main.css')}}">
-    <link rel="stylesheet" href="{{asset('source/assets/dest/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" href="{{asset('source/assets/dest/vendors/colorbox/example3/colorbox.css')}}">
-    <link rel="stylesheet" href="{{asset('source/assets/dest/rs-plugin/css/settings.css')}}">
-    <link rel="stylesheet" href="{{asset('source/assets/dest/rs-plugin/css/responsive.css')}}">
-    <link rel="stylesheet" title="style" href="{{asset('source/assets/dest/css/style.css')}}">
-    <link rel="stylesheet" href="{{asset('source/assets/dest/css/animate.css')}}">
-    <link rel="stylesheet" title="style" href="{{asset('source/assets/dest/css/huong-style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('user/css/style.css')}}">
 </head>
 <body>
 <div class="container">
@@ -22,7 +16,6 @@
     @yield('content')
 </div>
 @include('user.layout.footer')
-{{--<script src="{{ $js_link }}"></script>--}}
 <script src="{{asset('source/assets/dest/js/jquery.js')}}"></script>
 <script src="{{asset('source/assets/dest/vendors/jqueryui/jquery-ui-1.10.4.custom.min.js')}}"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>

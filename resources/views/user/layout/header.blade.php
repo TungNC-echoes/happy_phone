@@ -32,7 +32,7 @@
     <div class="header-body">
         <div class="beta-relative">
             <div class="pull-left">
-                <a href="/" id="logo"><img src="{{asset('source/assets/dest/images/phone.png')}}" width="200px" alt=""></a>
+                <a href="/" id="logo"><img src="{{asset('user/images/phone.png')}}" width="200px" alt=""></a>
             </div>
             <div class="pull-right beta-components space-left ov">
                 <div class="space10">&nbsp;</div>
